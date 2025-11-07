@@ -1,0 +1,129 @@
+/* Основной контейнер */
+.container-box {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Общие стили для секций */
+.section {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Контент внутри секций */
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* Секция 1: Приветствие */
+.section1 {
+  background-image: url(./assets/bg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section1 h1 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.section1 h2 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Секция 2: Clip-эффект */
+.section2 {
+  position: relative;
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  background-image: url(./assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Фиксированный текст в секции 2 */
+.fixed-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fixed-text h1 {
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+  max-width: 800px;
+  line-height: 1.6;
+  animation: fadeInScale 1s ease-out;
+}
+
+/* Анимация появления текста */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Секция 3 */
+.section3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.section3 h1 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Секция 4 */
+.section4 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.section4 h1 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section1 h1 {
+    font-size: 2rem;
+  }
+
+  .section1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .fixed-text h1 {
+    font-size: 1.25rem;
+    padding: 0 1.5rem;
+  }
+
+  .section3 h1,
+  .section4 h1 {
+    font-size: 1.75rem;
+  }
+}
