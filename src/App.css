@@ -1,7 +1,7 @@
 /* Основной контейнер */
 .container-box {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
 }
 
